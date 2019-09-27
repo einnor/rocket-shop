@@ -35,6 +35,7 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
+    "dotenv": "^8.1.0",
     "moment": "^2.24.0",
     "stripe": "^7.9.1",
     "underscore": "^1.9.1"
