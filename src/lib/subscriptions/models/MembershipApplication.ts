@@ -49,7 +49,7 @@ export default class MembershipApplication {
       this.nameIsValid();
   }
 
-  public validationMessage() {
+  public validationMessage(): string {
     if(this.isValid()){
       return "Application is valid";
     }else if(!this.emailIsValid()){
@@ -65,5 +65,6 @@ export default class MembershipApplication {
     }else if(this.expired()){
       return "This application is expired";
     }
+    return 'Unknown';
   }
 };
