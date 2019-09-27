@@ -1,4 +1,3 @@
-import Stripe from 'stripe';
 import Billing from './processes/billing';
 import * as Config from '../Config';
 import { ICreateSubscription } from './types';
@@ -17,10 +16,4 @@ const createSubscriptionParams: ICreateSubscription = {
   }
 };
 
-billing.createSubscription(createSubscriptionParams, (err: Stripe.errors.StripeCardError, res: Stripe.customers.ICustomer) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log(res);
-  }
-});
+billing.createSubscription(createSubscriptionParams);
