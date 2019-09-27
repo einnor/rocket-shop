@@ -4,14 +4,21 @@
   "description": "A crowd-sourced subscription tool",
   "main": "index.js",
   "scripts": {
+    "start": "tsc -w",
+    "build": "tsc",
     "test": "node_modules/mocha/bin/mocha"
   },
   "keywords": [],
   "author": "Ronnie Nyaga",
   "license": "ISC",
   "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.8",
+    "@types/sinon": "^7.0.13",
     "mocha": "^6.2.0",
-    "sinon": "^7.5.0"
+    "sinon": "^7.5.0",
+    "ts-loader": "^6.1.2",
+    "typescript": "^3.6.3"
   },
   "dependencies": {
     "moment": "^2.24.0"
