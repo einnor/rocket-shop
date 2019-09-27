@@ -48,4 +48,22 @@ export default class MembershipApplication {
       this.weightIsValid() &&
       this.nameIsValid();
   }
+
+  public validationMessage() {
+    if(this.isValid()){
+      return "Application is valid";
+    }else if(!this.emailIsValid()){
+      return "Email is invalid";
+    }else if(!this.ageIsValid()){
+      return "Age is outside our limits of 15 and 100 years";
+    }else if(!this.heightIsValid()){
+      return "Height is outside our limits of 60 and 75 inches";
+    }else if(!this.weightIsValid()){
+      return "Weight is outside our limits of 100 and 300 pounds";
+    }else if(!this.nameIsValid()){
+      return "A first and last name is required";
+    }else if(this.expired()){
+      return "This application is expired";
+    }
+  }
 };
