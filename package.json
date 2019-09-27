@@ -24,6 +24,7 @@
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.8",
     "@types/sinon": "^7.0.13",
+    "@types/underscore": "^1.9.3",
     "mocha": "^6.2.0",
     "nyc": "^14.1.1",
     "sinon": "^7.5.0",
@@ -32,6 +33,7 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "underscore": "^1.9.1"
   }
 }
