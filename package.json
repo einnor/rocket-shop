@@ -9,6 +9,14 @@
     "test": "mocha -r ts-node/register tests/**/*.test.ts",
     "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/einnor/rocket-shop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/einnor/rocket-shop/issues"
+  },
+  "homepage": "https://github.com/einnor/rocket-shop#readme",
   "keywords": [],
   "author": "Ronnie Nyaga",
   "license": "ISC",
