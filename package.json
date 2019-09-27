@@ -22,8 +22,10 @@
   "license": "ISC",
   "devDependencies": {
     "@types/mocha": "^5.2.7",
+    "@types/moment": "^2.13.0",
     "@types/node": "^12.7.8",
     "@types/sinon": "^7.0.13",
+    "@types/stripe": "^6.32.4",
     "@types/underscore": "^1.9.3",
     "mocha": "^6.2.0",
     "nyc": "^14.1.1",
@@ -34,6 +36,7 @@
   },
   "dependencies": {
     "moment": "^2.24.0",
+    "stripe": "^7.9.1",
     "underscore": "^1.9.1"
   }
 }

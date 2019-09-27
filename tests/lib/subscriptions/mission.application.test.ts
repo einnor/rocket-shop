@@ -41,6 +41,11 @@ describe('Membership Application Requirement', () => {
   });
 
   describe("Application is invalid if...", function(){
+    it('is expired', () => {
+      const invalidDetails: IMembershipApplication = { ...validDetails, validUntil: Date.parse('01/01/2010') };
+      const app = new MembershipApplication(invalidDetails);
+      assert(app.expired());
+    });
     it('email is 4 characters or less', function () {
       const invalidDetails = { ...validDetails, email: 'dd' };
       const app = new MembershipApplication(invalidDetails);

@@ -1,4 +1,5 @@
 import * as _ from 'underscore';
+import moment, { Moment } from 'moment';
 import { IMembershipApplication } from '../types';
 
 export default class MembershipApplication {
@@ -9,11 +10,16 @@ export default class MembershipApplication {
   private age: number;
   private height: number;
   private weight: number;
+  private validUntil: Moment;
 
   constructor(membershipApplication: IMembershipApplication) {
     _.extend(this, membershipApplication);
+    this.validUntil = membershipApplication.validUntil ? moment(membershipApplication.validUntil) : moment().add(10, "days");
   }
 
+  public expired(): boolean {
+    return this.validUntil.isBefore(moment());
+  }
 
   public emailIsValid(): boolean {
     return !!this.email && this.email.length > 3 && this.email.indexOf("@") > -1;

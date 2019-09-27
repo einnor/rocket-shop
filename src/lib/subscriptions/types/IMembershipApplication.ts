@@ -6,4 +6,7 @@ export interface IMembershipApplication {
   weight: number | undefined;
   firstName: string | undefined;
   lastName: string | undefined;
+  validUntil?: number;
+  role?: string;
+  card?: number;
 };
