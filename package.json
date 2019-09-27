@@ -1,0 +1,15 @@
+{
+  "name": "rocket-shop",
+  "version": "1.0.0",
+  "description": "A crowd-sourced subscription tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha"
+  },
+  "keywords": [],
+  "author": "Ronnie Nyaga",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  }
+}
