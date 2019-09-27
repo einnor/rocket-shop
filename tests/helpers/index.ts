@@ -1,8 +1,5 @@
 import MembershipApplication from '../../src/lib/subscriptions/models/MembershipApplication';
-import sinon from 'sinon';
 import Stripe from 'stripe';
-import DB from '../../src/lib/subscriptions/db';
-import Mission from '../../src/lib/subscriptions/models/Mission';
 
 export const validApplication = new MembershipApplication({
   firstName : "Test",
