@@ -1,6 +1,7 @@
 import moment from 'moment';
 import assert from 'assert';
 import Mission from '../models/Mission';
+import {IMembershipApplication} from '../types';
 
 export default class MissionControl {
   private db;
@@ -39,20 +40,21 @@ export default class MissionControl {
     });
   };
 
-  MissionControl.prototype.assignRole = function(application, next){
+  public assignRole(application: IMembershipApplication, next) {
     var missionArgs = {
       role: application.role,
       user: {
-        first: application.first,
-        last: application.last,
+        firstName: application.firstName,
+        lastName: application.lastName,
         email: application.email
       }
     };
+
     this.currentMission(function(err,mission){
       mission.assignRole(missionArgs);
       this.db.update({launchDate : mission.launchDate}, mission, {},function(err,res){
         next(null,mission);
       });
-    }.bind(this));
+    });
   };
 };
