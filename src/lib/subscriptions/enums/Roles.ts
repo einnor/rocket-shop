@@ -1,5 +1,6 @@
 export enum Roles {
   Commander = 'commander',
   MavPilot = 'mav-pilot',
-  Other = 'other'
-}
+  Colonist = 'colonist',
+  SpaceTourist = 'space-tourist',
+};
